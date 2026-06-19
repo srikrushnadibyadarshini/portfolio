@@ -1,0 +1,75 @@
+.contact {
+  border-top: 1px solid var(--line);
+}
+
+.heading {
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  margin: 16px 0 14px;
+}
+
+.sub {
+  color: var(--text-dim);
+  font-size: 1rem;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+a.card:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-3px);
+}
+
+.icon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.arrow {
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+@media (min-width: 760px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
